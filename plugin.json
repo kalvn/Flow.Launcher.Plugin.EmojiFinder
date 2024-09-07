@@ -1,0 +1,12 @@
+{
+  "ID": "d50362aa29f04cd59032bb44a5d5f7e5",
+  "ActionKeyword": "e",
+  "Name": "Emoji Finder",
+  "Description": "Find emoji by describing them",
+  "Author": "kalvn",
+  "Version": "0.0.1",
+  "Language": "javascript",
+  "Website": "https://github.com/kalvn/Flow.Launcher.Plugin.EmojiFinder",
+  "ExecuteFileName": "dist\\main.js",
+  "IcoPath": "img\\app.png"
+}

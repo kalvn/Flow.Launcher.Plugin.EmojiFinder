@@ -1,0 +1,22 @@
+{
+  "name": "flow.launcher.plugin.emojifinder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.5.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "clipboardy": "^4.0.0",
+    "emoji-unicode": "^2.0.1",
+    "emojilib": "^3.0.12"
+  }
+}
