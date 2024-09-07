@@ -1,15 +1,19 @@
 {
   "name": "flow.launcher.plugin.emojifinder",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/main.js",
   "type": "module",
   "scripts": {
     "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "Flow Launcher",
+    "Emoji",
+    "Plugin"
+  ],
+  "author": "kalvn",
+  "license": "MIT",
+  "description": "Find emoji easily with Flow Launcher by typing keywords.",
   "devDependencies": {
     "@types/node": "^22.5.2",
     "typescript": "^5.5.4"
