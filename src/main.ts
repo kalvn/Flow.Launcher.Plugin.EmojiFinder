@@ -47,7 +47,7 @@ function find (input: string): Result[] {
       const title = enhancedKeywords[0];
 
       result.push({
-        Title: title + ' ' + emoji,
+        Title: title ?? '',
         Subtitle: enhancedKeywords.slice(1).join(', '),
         JsonRPCAction: {
           method: 'copy',
@@ -59,18 +59,7 @@ function find (input: string): Result[] {
     }
   }
 
-  if (result.length > 0) {
-    return result;
-  }
-
-  return [
-    {
-      Title: 'No result',
-      Subtitle: `No emoji found matching ${input}`,
-      IcoPath: 'img\\app.png',
-      score : 0
-    }
-  ]
+  return result;
 }
 
 function matchesKeyword(inputs: string[], keywords: string[]): boolean {
