@@ -5,14 +5,14 @@ export const FlowLauncher = {
    * @param subtitle The notification text content.
    */
   showMessage: function (title: string, subtitle: string) {
-    console.log(JSON.stringify({
+    sendJsonRpcRequest({
       method: 'Flow.Launcher.ShowMsg',
       parameters: [
         title,
         subtitle,
         ''
       ]
-    }));
+    });
   }
 };
 
