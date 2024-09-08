@@ -1,6 +1,6 @@
 import fs from 'node:fs';
-import type { Result } from "../types.js";
-import { getIconFileName, matchesKeyword } from "./utils.js";
+import type { Result } from '../types.js';
+import { getIconFileName, matchesKeyword } from './utils.js';
 
 export function find (input: string): Result[] {
   const result: Result[] = [];
@@ -22,7 +22,7 @@ export function find (input: string): Result[] {
           parameters: [emoji]
         },
         IcoPath: getIconFileName(emoji) ?? 'img\\app.png',
-        score : 0
+        score: 0
       });
     }
   }

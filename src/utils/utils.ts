@@ -1,7 +1,7 @@
 // @ts-expect-error The lib does not support ESM.
 import emojiUnicode from 'emoji-unicode';
 
-export function matchesKeyword(inputs: string[], keywords: string[]): boolean {
+export function matchesKeyword (inputs: string[], keywords: string[]): boolean {
   return inputs.every(input =>
     keywords.some(keyword =>
       keyword.includes(input)
@@ -15,4 +15,3 @@ export function getIconFileName (emoji: string): string | undefined {
     return 'icons\\' + codes.toLowerCase().split(' ').join('-') + '.png';
   }
 }
-
