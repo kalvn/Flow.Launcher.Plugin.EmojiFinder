@@ -9,10 +9,13 @@ describe('FlowLauncher', () => {
   });
 
   test('sendJsonRpcRequest', () => {
-    sendJsonRpcRequest({ message: 'hello' });
+    sendJsonRpcRequest({
+      method: 'hello',
+      parameters: ['world']
+    });
 
     expect(consoleMock).toHaveBeenCalledOnce();
-    expect(consoleMock).toHaveBeenCalledWith('{"message":"hello"}');
+    expect(consoleMock).toHaveBeenCalledWith('{"method":"hello","parameters":["world"]}');
   });
 
   test('showMessage', () => {

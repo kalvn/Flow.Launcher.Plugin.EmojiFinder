@@ -1,0 +1,7 @@
+body:
+  - type: checkbox
+    attributes:
+      name: enableNotification
+      label: Show a system notification when selecting an emoji
+      description: "If checked, a system notification is shown when an emoji is copied to the clipboard."
+      defaultValue: true

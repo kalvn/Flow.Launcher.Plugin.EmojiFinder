@@ -1,9 +1,14 @@
 import fs from 'node:fs';
-import type { Result } from '../types.js';
-import { getIconFileName, matchesKeyword } from './utils.js';
+import { matchesKeyword } from './utils.js';
 
-export function find (input: string): Result[] {
-  const result: Result[] = [];
+export type FindResult = {
+  title: string
+  keywords: string[]
+  emoji: string
+};
+
+export function find (input: string): FindResult[] {
+  const result: FindResult[] = [];
   const emojis: Record<string, string[]> = JSON.parse(fs.readFileSync('./node_modules/emojilib/dist/emoji-en-US.json', 'utf8'));
 
   const normalizedInput = input.toLowerCase();
@@ -15,14 +20,9 @@ export function find (input: string): Result[] {
       const title = enhancedKeywords[0];
 
       result.push({
-        Title: title ?? '',
-        Subtitle: enhancedKeywords.slice(1).join(', '),
-        JsonRPCAction: {
-          method: 'copy',
-          parameters: [emoji]
-        },
-        IcoPath: getIconFileName(emoji) ?? 'img\\app.png',
-        score: 0
+        title: title ?? '',
+        keywords: enhancedKeywords.slice(1),
+        emoji
       });
     }
   }

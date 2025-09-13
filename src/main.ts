@@ -4,12 +4,17 @@ import { copy } from './actions/copy.js';
 import { query } from './actions/query.js';
 
 const args: Arguments = JSON.parse(process.argv[2] ?? '{}');
-const { method, parameters } = args;
+const { method, parameters, settings } = args;
 
 if (method === 'query') {
-  query(parameters[0]);
+  const input = parameters[0] as string;
+
+  query(input, settings);
 }
 
 if (method === 'copy') {
-  copy(parameters[0]);
+  const emoji = parameters[0] as string;
+  const enableNotification = parameters[1] as boolean ?? true;
+
+  copy(emoji, enableNotification);
 }
