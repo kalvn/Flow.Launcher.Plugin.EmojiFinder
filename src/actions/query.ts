@@ -17,7 +17,7 @@ export function query (input: string | undefined, settings: Settings): void {
       IcoPath: getIconFileName(f.emoji) ?? 'img\\app.png',
       score: 0
     };
-  })
+  });
 
   sendJsonRpcRequest({ result: request });
 }
