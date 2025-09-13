@@ -1,3 +1,5 @@
+import type { JsonRpcRequest, JsonRpcResponse } from '../types.js';
+
 export const FlowLauncher = {
   /**
    * Shows a desktop notification.
@@ -16,6 +18,6 @@ export const FlowLauncher = {
   }
 };
 
-export function sendJsonRpcRequest (req: any): void {
+export function sendJsonRpcRequest (req: JsonRpcRequest | JsonRpcResponse): void {
   console.log(JSON.stringify(req));
 }
