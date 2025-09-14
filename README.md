@@ -24,6 +24,8 @@ Press <kbd>E</kbd>, type what you are looking for, and get it copied to the clip
 ## Configuration
 You can change the action keyword in the plugins settings menu.
 
+You can also enable or disabled system notifications from the same menu.
+
 ## Resources
 
 Emoji icons are taken from https://github.com/iamcal/emoji-data
